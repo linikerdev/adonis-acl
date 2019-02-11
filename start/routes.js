@@ -20,5 +20,5 @@ Route.post('login', 'Auth/AuthController.login')
 
 Route.resource('/user', 'UserController').middleware([
   'auth:jwt',
-  'is:(administrator || moderator)'
+  'is:(moderator)'
 ])
